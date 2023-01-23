@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/Rectangle37.png");
+    background-repeat: no-repeat;
+    
+}
+
+.container{
+    max-width: 1226px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    /* box-shadow: 0 5px 15px gray; */
+}
+
+nav{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    margin-right: 430px;
+}
+
+.nav__list--item{
+    list-style: none;
+}
+
+
+.nav__list--item-link{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.nav__list--item-link:hover{
+    font-weight: bold;
+    color: #ee551481;
+    
+}
+
+
+.active{
+    font-weight: bold;
+    color: #EE5514;
+}
+
+.nav__btn{
+    padding: 15px;
+    background-color: #EE5514;
+    border-radius: 5px;
+}
+
+/* --------- Main started ----------- */
+
+/* .intro{
+    width: 100%;
+    position: relative;
+
+} */
+
+.bussines{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.text{
+    margin-top: 60px;
+    margin-right: 150px;
+    float: left;
+}
+
+.images{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 70px;
+    margin-top: 50px;
+}
+
+.border{
+    position:absolute;
+    width: 400px;
+    height: 400px;
+    border: 10px solid #EE5514;
+    margin-left: 650px;
+    margin-top: 60px;
+    z-index: -1;
+    /* box-shadow: -10px 10px 15px gray; */
+}
+
+.text h1{
+    
+    font-size: 55px;
+    font-weight: bold;
+}
+
+span{
+    color: #EE5514; 
+}
+
+.info{
+    width: 800px;
+    height: 125px;
+    border: 2px solid #EE5514;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    /* margin-left: 230px; */
+    position:absolute;
+}
+
+.info__list{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info__list--item{
+    list-style: none;
+}
+
+.info > .nav__btn{
+    margin-right: 50px;
+}
+
