@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormData</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container form__container" >
+      <h1 class="form__title">Регистрация профиля</h1>
+
+      <form action="#">
+        <div class="forn__control">
+          <label for="form__user--phone-number">Номер телефона</label>
+          <input
+            type="tel"
+            name="form__user--phone-number"
+            id="form__user--phone-number"
+            placeholder="+7 (900) 000-00-00"
+          />
+          <span>uft_pole_name</span>
+        </div>
+
+        <div class="forn__control">
+          <label for="form__user--email"> Email (необязательно) </label>
+          <input
+            type="email"
+            name="form__user--email"
+            id="form__user--email"
+            placeholder="example@gmail.com"
+          />
+          <span>uft_pole_name</span>
+        </div>
+
+        <div class="forn__control">
+          <label for="form__user--password">Пароль</label>
+          <input
+            type="password"
+            name="form__user--password"
+            id="form__user--password"
+          />
+          <span>uft_pole_name</span>
+        </div>
+
+        <div class="forn__control">
+          <label for="form__user--set-password">Повторите пароль</label>
+          <input
+            type="password"
+            name="form__user--set-password"
+            id="form__user--set-password"
+          />
+          <span>uft_pole_name</span>
+        </div>
+        <p class="form__terms">
+          Нажимая на кнопку “Зарегистрироваться”, вы соглашаетесь на
+          <a href="#">обработку персональных данных</a>.
+        </p>
+
+        <button class="form__button">Зарегистрироваться</button>
+      </form>
+
+      <a href="#">Уже зарегистрированы? Войти</a>
+    </div>
+  </body>
+</html>

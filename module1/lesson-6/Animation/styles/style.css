@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+img {
+  width: 300px;
+  height: 120px;
+}
+
+.circle {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+
+  animation-name: circle;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+@keyframes circle {
+  0% {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+
+  9% {
+    /* padding-top: 30px; */
+    position: absolute;
+    top: 30px;
+    left: 700px;
+  }
+
+  18% {
+    /* padding-top: 30px; */
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    transform: rotate(90deg);
+  }
+
+27% {
+    /* padding-top: 30px; */
+    position: absolute;
+    top: 250px;
+    left: 700px;
+    transform: rotate(90deg);
+  }
+
+  36% {
+    position: absolute;
+    top: 250px;
+    left: 750px;
+    transform: rotate(0deg);
+  }
+
+  45% {
+    position: absolute;
+    top: 250px;
+    left: 1200px;
+    transform: rotate(0deg);
+  }
+
+  54% {
+    position: absolute;
+    top: 250px;
+    left: 1200px;
+    transform: rotate(90deg);
+  }
+
+  63% {
+    position: absolute;
+    top: 700px;
+    left: 1200px;
+    transform: rotate(90deg);
+  }
+
+  72% {
+    position: absolute;
+    top: 700px;
+    left: 1200px;
+    transform: rotate(180deg);
+  }
+
+  81% {
+    position: absolute;
+    top: 700px;
+    left: 200px;
+    transform: rotate(180deg);
+  }
+
+  90% {
+    position: absolute;
+    top: 700px;
+    left: 30px;
+    transform: rotate(270deg);
+  }
+
+  99%{
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    transform: rotate(270deg);
+  }
+
+  100%{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    transform: rotate(360deg);
+  }
+}

@@ -1,73 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puma</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:ital,wght@0,400;0,500;1,500&family=Source+Serif+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <!-- --------- header started -------- -->
     <header>
-        <div class="container">
-            <nav class="nav">
-                <h2 class="nav__logo"><img src="./img/Group 363.svg" alt=""></h2>
+      <div class="container">
+        <nav class="nav">
+          <h2 class="nav__logo"><img src="./img/Group 363.svg" alt="" /></h2>
 
-                <ul class="nav__list">
-                    <li class="nav__list--item"><a href="#" class="nav__list--item-link active">Menu</a></li>
-                    <li class="nav__list--item"><a href="#" class="nav__list--item-link">About</a></li>
-                    <li class="nav__list--item"><a href="#" class="nav__list--item-link">Feature</a></li>
-                    <li class="nav__list--item"><a href="#" class="nav__list--item-link">Gallary</a></li>
-                </ul>
-                <div class="nav__btn">Buy now</div>
+          <ul class="nav__list">
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--item-link active">Menu</a>
+            </li>
+            <li class="nav__list--item dropdown">
+              <a href="#" class="nav__list--item-link">About</a>
 
-            </nav>
-        </div>
+              <ul class="dropdown__menu">
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">Akmal</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">Salim</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">Karim</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">Nasim</a>
+                </li>
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">Olim</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--item-link">Feature</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--item-link">Gallary</a>
+            </li>
+          </ul>
+          <div class="nav__btn">Buy now</div>
+        </nav>
+      </div>
     </header>
     <!-- --------- header end -------- -->
 
     <!-- --------- main started --------- -->
     <main>
-        <section class="intro">
-            <div class="container">
-                <div class="bussines">
-                    <div class="text">
-                        <h1>Life is better<br>in running<br><span>shoes</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Illum, omnis.</p>
-                    </div>
-                    <div class="images">
-                        <img src="./img/SYDBcVgqXO-removebg-preview 1.svg" alt="">
-                    </div>
-                    <span class="border"></span>
-                </div>
-                <div class="info">
-                    <ul class="info__list">
-                        <li class="info__list--item">
-                            Salom
-                            <br><span class="info__category">Puma</span>
-                        </li>
-                        <li class="info__list--item">
-                            Salom
-                            <br><span class="info__category">Puma</span>
-                        </li>
-                        <li class="info__list--item">
-                            Salom
-                            <br><span class="info__category">Puma</span>
-                        </li>
-                        <li class="info__list--item">
-                            Salom
-                            <br><span class="info__category">Puma</span>
-                        </li>
-                    </ul>
-                    <div class="nav__btn">Buy now</div>
-                </div>
+      <section class="intro">
+        <div class="container">
+          <div class="bussines">
+            <div class="text">
+              <h1>Life is better<br />in running<br /><span>shoes</span></h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur,<br />
+                adipisicing elit. Illum, omnis.
+              </p>
             </div>
-        </section>
+            <div class="images">
+              <img src="./img/SYDBcVgqXO-removebg-preview 1.svg" alt="" />
+            </div>
+            <span class="border"></span>
+          </div>
+          <div class="info">
+            <ul class="info__list">
+              <li class="info__list--item">
+                <p>Brand</p>
+                <br /><span class="info__category"
+                  >Puma <img src="./img/Vector.png" alt=""
+                /></span>
+              </li>
+              <li class="info__list--item">
+                <p>Person</p>
+                <br /><span class="info__category"
+                  >man <img src="./img/Vector.png" alt=""
+                /></span>
+              </li>
+              <li class="info__list--item">
+                <p>Size</p>
+                <br /><span class="info__category"
+                  >large <img src="./img/Vector.png" alt=""
+                /></span>
+              </li>
+              <li class="info__list--item">
+                <p>Price</p>
+                <br /><span class="info__category"
+                  >$150 <img src="./img/Vector.png" alt=""
+                /></span>
+              </li>
+            </ul>
+            <div class="nav__btn">Buy now</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="content__section">
+            <h3>VIDEO</h3>
+            <div class="content__title">Desire the feel of satisfaction.</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              beatae. Aut nemo quisquam pariatur excepturi vel architecto quo
+              eveniet explicabo!
+            </p>
+          </div>
+          <div class="videos">
+            <img src="./img/img1.jpg" alt="" />
+            <img src="./img/img2.jpg" alt="" />
+            <img src="./img/play.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="feature">
+        <div class="container">
+          <div class="first__card--title">
+            <p class="title1">FEATURE</p>
+            <p class="title2">We have best feature in Shoes</p>
+          </div>
+          <div class="first__card">
+            <div class="feature__card">
+              <img
+                src="./img/feature1.png"
+                alt=""
+                class="feature__card--image"
+              />
+              <p class="feature__card--title">Quality</p>
+              <p class="feature__card--info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, veritatis.
+              </p>
+              <span class="feature__card--link">Read more ></span>
+            </div>
+
+            <div class="feature__card">
+              <img
+                src="./img/feature2.png"
+                alt=""
+                class="feature__card--image"
+              />
+              <p class="feature__card--title">Flexible</p>
+              <p class="feature__card--info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, veritatis.
+              </p>
+              <span class="feature__card--link">Read more ></span>
+            </div>
+
+            <div class="feature__card">
+              <img
+                src="./img/feature3.png"
+                alt=""
+                class="feature__card--image"
+              />
+              <p class="feature__card--title">Long Lasting</p>
+              <p class="feature__card--info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, veritatis.
+              </p>
+              <span class="feature__card--link">Read more ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="container">
+          <p class="title3">Gallery</p>
+          <div class="gallery__title">40+ YEARS' EXPERIENCE</div>
+          <ul class="gallery__bar">
+            <li class="gallery__bar--item">Categories:</li>
+            <li class="gallery__bar--item">All</li>
+            <li class="gallery__bar--item">Male</li>
+            <li class="gallery__bar--item">Female</li>
+            <li class="gallery__bar--item">Kids</li>
+          </ul>
+        </div>
+        <div class="gallerys">
+          <div class="container">
+            <div class="gallery__card">
+              <div class="gallery__card--item">
+                <img src="./img/gallery1.png" alt="" class="gallery__card--item-image">
+                <h3 class="gallery__card--item-title">Puma RS-X Bold</h3>
+                <p class="gallery__card--item-size">Size: Dubble-XL</p>
+                <p class="gallery__card--item-price">Price: $200</p>
+                <button class="btn">Buy now</button>
+              </div>
+                <div class="gallery__card--item">
+                  <img src="./img/gallery2.png" alt="" class="gallery__card--item-image">
+                  <h3 class="gallery__card--item-title">Puma Sneakers</h3>
+                  <p class="gallery__card--item-size">Size: Dubble-XL</p>
+                  <p class="gallery__card--item-price">Price: $180</p>
+                  <button class="btn">Buy now</button>
+                </div>
+  
+                <div class="gallery__card--item">
+                  <img src="./img/gallery3.png" alt="" class="gallery__card--item-image">
+                  <h3 class="gallery__card--item-title">Puma Ferrari</h3>
+                  <p class="gallery__card--item-size">Size: Dubble-XL</p>
+                  <p class="gallery__card--item-price">Price: $190</p>
+                  <button class="btn">Buy now</button>
+                </div>
+  
+                <div class="gallery__card--item">
+                  <img src="./img/gallery4.png" alt="" class="gallery__card--item-image">
+                  <h3 class="gallery__card--item-title">Puma Running</h3>
+                  <p class="gallery__card--item-size">Size: Dubble-XL</p>
+                  <p class="gallery__card--item-price">Price: $200</p>
+                  <button class="btn">Buy now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
-
-    <div class="box">
-
-    </div>
-</body>
+  </body>
 </html>
