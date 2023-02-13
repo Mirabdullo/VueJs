@@ -1,120 +1,98 @@
-"use strict"
+"use strict";
+// ! --------------------- Modal window ---------------------------------------
 
+const modalWindow = document.querySelector(".modal-window"),
+  signUpBtn = document.querySelector(".register-btn"),
+  modalContent = document.querySelector(".modal-content"),
+  closeBtn = document.querySelector(".close-btn");
 
-const modalWindow = document.querySelector('.modal-window'),
-closeBtn = document.querySelector('.close-btn'),
-signUpBtn = document.querySelector('.register-btn'),
-modalContent = document.querySelector('.modal-content'),
-introProduct = document.querySelector('.intro__product--info'),
-aboutCard = document.querySelector('.about__card')
+signUpBtn.addEventListener("click", (e) => {
+  modalWindow.classList.remove("hidden");
+});
+closeBtn.addEventListener("click", (e) => {
+  modalWindow.classList.add("hidden");
+});
 
+modalWindow.addEventListener("click", (e) => {
+  if (e.target.classList.contains("modal-window")) {
+    modalContent.classList.toggle("shaker");
+  }
+});
 
-signUpBtn.addEventListener('click', () => {
-    modalWindow.classList.remove('hidden')
-})
+// ! ------------------ Dinamic elemnts ---------------------------------------
 
-closeBtn.addEventListener('click', () => {
-    modalWindow.classList.add('hidden')
-})
-
-modalWindow.addEventListener('click', (e) => {
-    console.log(e.target.classList.contains('modal-window'));{
-        if(e.target.classList.contains('modal-window')){
-            modalContent.classList.toggle('shaker')
-        }
-    }
-})
-
- 
-
-
-// ---------------  dynamic elements  --------------------------------//
-
+const introProduct = document.querySelector(".intro__product--info");
 let cards = [
-    {
-        id: 1,
-        img: "./images/user 1.svg",
-        title: "30K",
-        description: "User Order"
-    },
-    {
-        id: 1,
-        img: "./images/Vector (1).svg",
-        title: "20K",
-        description: "Reviews(4.8)"
-    },
-    {
-        id: 1,
-        img: "./images/Group (1).svg",
-        title: "300",
-        description: "Items"
-    },
-]
+  { id: 1, img: "./images/user 1.svg", title: "30K", description: "UserOrder" },
+  {
+    id: 2,
+    img: "./images/star 7.svg",
+    title: "20K",
+    description: "Reviews(4.8)",
+  },
+  { id: 3, img: "./images/harvest 1.svg", title: "300", description: "Items" },
+];
 
+cards.forEach((items) => {
+  const newElement = createElement(
+    "div",
+    "card mb-[30px] hover:shadow-lg bg-white flex justify-between pl-[34px] pr-[46px] py-[17px] rounded-sm items-center",
+    ` <span class="p-3 bg-green-50 rounded-full">
+    <img src="${items.img}" alt=""
+  /></span>
+  <div class="flex flex-col ml-3">
+    <h2 class="font-normal text-5xl">${items.title}</h2>
+    <p class="font-normal text-lg leading-[30px]">${items.description}</p>
+  </div>`
+  );
+  introProduct.append(newElement);
+});
 
-const createElemnt = (tagName, className, content) => {
-    const element = document.createElement(tagName)
+let icon = document.querySelector(".icon");
 
-    if(className){
-        element.setAttribute('class', className)
-    }
+// icon.onclick = (e) => {
+//   console.log((e.target.style.color = "red"));
+// };
+// icon.addEventListener("mouseup", (e) => {
+//   console.log("UP");
+// });
+// icon.addEventListener("mousedown", (e) => {
+//   console.log("DOWN");
+// });
 
-    if(content){
-        element.innerHTML = content
-    }
+// window.addEventListener("mousemove", (e) => {
+//   console.log(e.target);
+// });
 
-    return element
-}
+// ! product info dinamic
+let productInfoItems = [
+  {
+    id: 1,
+    img: "./images/delivery-man 2.svg",
+    title: "Fasted delivery Service",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  },
+  {
+    id: 2,
+    img: "./images/shopping 1.svg",
+    title: "Online order Service",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  },
+  {
+    id: 3,
+    img: "./images/fast-time 1.svg",
+    title: "24/8 Service",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  },
+];
+const productInfo = document.querySelector(".info__content---items");
 
-
-
-
-
-cards.forEach(items => {
-    const newElemnt = createElemnt('div', "card hover:shadow-lg shadow bg-white flex justify-between items-center py-5 pr-11 px-8 rounded-sm mb-[30px]",
-        `<span class="bg-green-200 p-4 rounded-full"><img src="${items.img}" alt="user"></span>
-
-        <div class="flex flex-col items-center justify-center ml-3">
-          <h2 class="text-5xl font-normal">${items.title}</h2>
-          <p>${items.description}</p>
-        </div>
-      `
-    )
-
-    introProduct.append(newElemnt)
-})
-
-
-
-
-
-let about_cards = [
-    {
-        id: 1,
-        img: "./images/Vector (2).svg",
-        title: "Fasted delivery Service",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    },
-    {
-        id: 1,
-        img: "./images/Vector (3).svg",
-        title: "Online order Service",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    },
-    {
-        id: 1,
-        img: "./images/Group (2).svg",
-        title: "24/8 Service",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    },
-]
-
-
-
-
-
-about_cards.forEach(item => {
-    const newElemnt = createElemnt("div",
+productInfoItems.forEach((item) => {
+  const element = createElement(
+    "div",
     "info__content---items-item w-[500px] h-[160px] px-[60px] py-10  hover:bg-green-50",
     `
     <div class="flex justify-around">
@@ -133,13 +111,117 @@ about_cards.forEach(item => {
         </p>
       </div>
     </div>`
-    )
+  );
+  productInfo.append(element);
+});
 
-    aboutCard.append(newElemnt)
+// carousel
+
+const carouselData = [
+  {
+    id: Date.now(),
+    title: "What Our Customers About Us saying",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis",
+    clinetName: "Ahmed Hridoy",
+    clientImage: "./images/aka.png",
+  },
+  {
+    id: Date.now(),
+    title: "What Our Customers About Us saying",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis",
+    clinetName: "Mesut Özil",
+    clientImage: "https://picsum.photos/id/251/500/500",
+  },
+  {
+    id: Date.now(),
+    title: "What Our Customers About Us saying",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis",
+    clinetName: "Elon Mask",
+    clientImage: "https://picsum.photos/id/133/500/500",
+  },
+  {
+    id: Date.now(),
+    title: "What Our Customers About Us saying",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis",
+    clinetName: "Stiv Jobs",
+    clientImage: "https://picsum.photos/id/533/500/500",
+  },
+];
+
+// const explore__wrapper = document.querySelectorAll(".explore__wrapper"),
+//   comment_wrapper = document.querySelector(".comment__wrapper"),
+//   leftBtn = document.querySelector(".left-icon"),
+//   rightBtn = document.querySelector(".right-icon");
+
+const list = document.querySelector(".list");
+
+carouselData.forEach((item) => {
+  
+  const itemCorusel = createElement(
+    "div",
+    "explore__wrapper swiper-slide flex pt-[89px] pb-[143px] relative  duration-500 min-w-[1239px] mx-1 px-3",
+    `
+             <div class="explore__info">
+              <h1 class="text-6xl font-bold w-[640px] mb-[20px] leading-[90px] mt-[20px]">
+              ${item.title}
+              </h1>
+              <p class="text-[#555555] text-lg w-[586px] leading-8">
+           ${item.description}
+              </p>
+              <h3 class="text-[30px] font-normal mb-[20px] leading-[36px] mt-[40px]">
+                ${item.clinetName}
+              </h3>
+              <img src="./images/yulduzcha.svg" alt="stars" />
+            </div>
+            <div class="ml-[80px] relative">
+              <img src="${item.clientImage}" alt="aka" class="w-[450px] h-[450px] rounded-full object-cover" />
+              <img src="./images/reyting.png" alt="reyting" class="absolute bottom-4 -left-8" />
+            </div>
+  
+  `);
+
+  list.append(itemCorusel);
+});
+
+
+
+
+let body = document.querySelector('body')
+
+let header = document.querySelector('header')
+let intro = document.querySelector('.intro__wrapper')
+let info__content = document.querySelector('.info__content--items')
+
+let person = document.querySelector('.person')
+
+window.addEventListener('scroll', (e) => {
+    let scrollY = window.scrollY
+
+    if(scrollY > 232){
+        header.classList.add('fixed', 'top-0', 'w-full',"bg-white", 'z-10', 'duration-700')
+    }else{
+        header.classList.remove('fixed')
+    }
+
+
+    if(scrollY > 543) {
+        info__content.classList.remove("-translate-x-96")
+        person.classList.remove("translate-x-96")
+    }else {
+        info__content.classList.add("-translate-x-96")
+        person.classList.add("translate-x-96")
+    }
+
+
+
 })
 
-let icon = document.querySelector('.icon')
 
-icon.onclick = function(e) {
-    console.log(object);
-}
+
+window.addEventListener('DOMContentLoaded', () => {
+    intro.classList.remove('translate-y-60')
+})
